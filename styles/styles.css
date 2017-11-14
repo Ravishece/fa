@@ -192,12 +192,19 @@
 
 .bids-section{
   margin-top: 10px;
-  
+}
+
+.bids-table > tbody > tr.accepted-bid{
+  background: rgba(200, 236, 167, 0.77);
+}
+
+.bids-table > tbody > tr.rejected-bid{
+  background: rgb(245, 173, 166);
 }
 
 .bids-btn{
   float: right;
-  margin: 10px 0 10px;
+  margin-bottom: 10px;
 }
 
 .footer {
