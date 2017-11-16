@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Walmart App</title>
+<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <nav id="myNavbar" class="top-header navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="row">
+            <div class="col-xs-2 col-sm-3 col-md-3 header-logo-section">
+                <button class="navbar-toggle pull-left navbar-toggle-btn" data-target=".navbar-collapse" data-toggle="collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <!-- <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span> -->
+                  <span class="glyphicon glyphicon-menu-hamburger"></span>
+                </button>
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#"></a>
+                </div>
+            </div>
+            <div class="col-xs-8 col-sm-8 header-search-section">
+              <div class="input-group header-search-control">
+                  <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">All</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">RFQs</a></li>
+                      <li><a href="#">Produce Listing</a></li>
+                    </ul>
+                  </div><!-- /btn-group -->
+                  <input type="text" class="form-control header-search-input" />
+                  <button type="button" class="btn btn-default header-search-icon" aria-label="Search">
+                    <span class="glyphicon glyphicon-search"></span>
+                  </button>
+                </div>
+            </div>
+            <div class="col-xs-2 col-sm-1 header-account-section">
+                <div class="btn-group profile-options">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="glyphicon glyphicon-user"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Logout</a></li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+          
+      </div>
+  </nav>
+
+  <div class="container main-container">
+
+      <div class="row">
+          <div class="col-sm-12 navbar-section">
+              <nav class="navbar navbar-default hr-navbar-top">                  
+                <div class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav">
+                    <li class="active"> 
+                      <a href="#">
+                        <span class="glyphicon glyphicon-list-alt"></span>
+                        RFQ
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="glyphicon glyphicon-search"></span> 
+                        Produce Listing
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+          </div>
+      </div>
+
+      <div class="row">
+        
+        <div class="col-sm-12 main-section">
+            <button type="button" class="btn btn-success btn-rfq" data-toggle="modal" data-target="#createRFQModal">
+              Create a RFQ
+            </button>
+
+            <ul  class="nav nav-tabs">
+              <li class="active">
+                <a  href="#openRFQ" data-toggle="tab">Open RFQs</a>
+              </li>
+              <li>
+                <a href="#closedRFQ" data-toggle="tab">Closed RFQs</a>
+              </li>
+            </ul>
+
+            <div class="tab-content clearfix main-tabs">
+
+                <!-- tab1 content start -->
+                <div class="tab-pane active" id="openRFQ">
+
+                  <ul class="media-list rfq-list">
+                      <li class="media">
+                        <a class="pull-right" href="#">
+                          <img class="media-object rfq-img" src="images/potato.jpg" alt="">
+                        </a>
+                        <div class="media-body">
+                          <h4 class="media-heading">Potato</h4>
+                          <div>
+                            <p>Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                            <p>Quantity : 2000 kgs</p>
+                            <p>Closes on : 10 Dec, 2017</p>
+                            <p>
+                              <button class="btn btn-primary" type="button" data-target=".bids-section" data-toggle="collapse">
+                                View Bids 
+                                <span class="badge">6</span>
+                                <span class="caret"></span>
+                              </button>
+
+                              <button class="btn btn-danger" type="button" data-target="#deleteQuoteConfirmmodal" data-toggle="modal">
+                                Close Quote
+                                <span class="glyphicon glyphicon-remove"></span>
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="bids-section collapse">
+                          <table class="table table-bordered table-striped bids-table">
+                              <thead>
+                                  <tr>
+                                      <th>Select</th>
+                                      <th>Name</th>
+                                      <th>Ratings</th>
+                                      <th>Quantity</th>
+                                      <th>Unit Price</th>
+                                      <th>Location</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr class="accepted-bid">
+                                      <td>
+                                        <input type="checkbox" />
+                                        <div>
+                                          <span class="glyphicon glyphicon-ok"></span>
+                                          Accepted
+                                        </div>
+                                      </td>
+                                      <td>Mangesh</td>
+                                      <td><div class="stars stars4"></div></td>
+                                      <td>800 Kgs</td>
+                                      <td>Rs. 30</td>
+                                      <td>Nellur, Andhra Pradesh, India</td>
+                                  </tr>
+                                  <tr>
+                                      <td><input type="checkbox" /></td>
+                                      <td>Ramandeep Singh</td>
+                                      <td><div class="stars stars3"></div></td>
+                                      <td>200 Kgs</td>
+                                      <td>Rs. 40</td>
+                                      <td>Haryana, India</td>
+                                  </tr>
+                                  <tr>
+                                      <td><input type="checkbox" /></td>
+                                      <td>Parul Aggarwal</td>
+                                      <td><div class="stars stars4"></div></td>
+                                      <td>1200 Kgs</td>
+                                      <td>Rs. 25</td>
+                                      <td>Delhi, India</td>
+                                  </tr>
+                                  <tr>
+                                      <td><input type="checkbox" /></td>
+                                      <td>Anika Setia</td>
+                                      <td><div class="stars stars5"></div></td>
+                                      <td>850 Kgs</td>
+                                      <td>Rs. 60</td>
+                                      <td>UP, India</td>
+                                  </tr>
+                                  <tr class="rejected-bid">
+                                      <td>
+                                        <input type="checkbox" />
+                                        <div>
+                                          <span class="glyphicon glyphicon-remove"></span>
+                                          Rejected
+                                        </div>
+                                      </td>
+                                      <td>Ravishankar Sasidharan</td>
+                                      <td><div class="stars stars4"></div></td>
+                                      <td>1500 Kgs</td>
+                                      <td>Rs. 20</td>
+                                      <td>Salem, Tamil Nadu, India</td>
+                                  </tr>
+                                  <tr>
+                                      <td><input type="checkbox" /></td>
+                                      <td>Anoop George</td>
+                                      <td><div class="stars stars5"></div></td>
+                                      <td>250 Kgs</td>
+                                      <td>Rs. 20</td>
+                                      <td>Kerala, India</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                          <div class="bids-btn">
+                              <button class="btn btn-success btn-sm" type="button" data-target="#acceptBidsModal" data-toggle="modal">
+                                <span class="glyphicon glyphicon-ok"></span>
+                                Accept Bids
+                              </button>
+                              <button class="btn btn-danger btn-sm" type="button" data-target="#rejectBidsModal" data-toggle="modal" >
+                                <span class="glyphicon glyphicon-remove"></span>
+                                Reject Bids
+                              </button>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="media">
+                        <a class="pull-right" href="#">
+                          <img class="media-object rfq-img" src="images/brinjal.jpg" alt="">
+                        </a>
+                        <div class="media-body">
+                          <h4 class="media-heading">Brinjal</h4>
+                          <div>
+                              <p>Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                              <p>Quantity : 5000 kgs</p>
+                              <p>Closes on : 30 Dec, 2017</p>
+                            </div>
+                        </div>
+                      </li>
+
+                      <li class="media">
+                        <a class="pull-right" href="#">
+                          <img class="media-object rfq-img" src="images/onion.jpg" alt="">
+                        </a>
+                        <div class="media-body">
+                          <h4 class="media-heading">Onion</h4>
+                          <div>
+                              <p>Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                              <p>Quantity : 3000 kgs</p>
+                              <p>Closes on : 23 Dec, 2017</p>
+                            </div>
+                        </div>
+                      </li>
+
+                      <li class="media">
+                        <a class="pull-right" href="#">
+                          <img class="media-object rfq-img" src="images/Strawberry.jpg" alt="">
+                        </a>
+                        <div class="media-body">
+                          <h4 class="media-heading">Strawberry</h4>
+                          <div>
+                            <p>Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                            <p>Quantity : 1000 kgs</p>
+                            <p>Closes on : 23 Dec, 2017</p>
+                          </div>
+                        </div>
+                      </li>
+
+                    </ul>
+                </div>
+                <!-- tab1 content end -->
+
+                <!-- tab2 content start -->
+                <div class="tab-pane" id="closedRFQ">
+                  <ul class="media-list rfq-list">
+                    <li class="media">
+                      <a class="pull-right" href="#">
+                        <img class="media-object rfq-img" src="images/carrot.jpg" alt="">
+                      </a>
+                      <div class="media-body">
+                        <h4 class="media-heading">Carrot</h4>
+                        <div>
+                            <p>Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                            <p>Quantity : 500 kgs</p>
+                            <p>Closed on : 30 Oct, 2017</p>
+                          </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- tab2 content end -->
+
+              </div>
+          </div>
+
+        </div>
+      </div>
+
+      
+  </div>
+
+  <footer class="footer">
+      <div class="row">
+          <div class="col-sm-12">
+            <p>&copy; Wal-Mart Stores, Inc.</p>
+          </div>
+      </div>
+  </footer>
+
+  <!-- Modal start - Create RFQ Modal  -->
+  <div id="createRFQModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Request for Quote</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+              <div class="form-group">
+                <label class="col-form-label" for="productNameInput">Product Name</label>
+                <!-- <input type="text" class="form-control" id="productNameInput" placeholder="Product Name"> -->
+                <select class="select-custom">
+                  <option>Tomato</option>
+                  <option>Potato</option>
+                  <option>Brinjal</option>
+                  <option>Carrot</option>
+                  <option>Orange</option>
+                  <option>Strawberry</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="col-form-label" for="quantityInput">Quantity</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" id="quantityInput" placeholder="Quantity">
+                  <span class="input-group-addon">Kgs</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-form-label" for="endDateInput">RFQ End Date</label>
+                <input type="text" class="form-control" id="endDateInput" placeholder="RFQ End Date">
+              </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Create</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal end - Create RFQ Modal -->
+
+  <!-- Modal start - Delete Quote Modal -->
+  <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="deleteQuoteConfirmmodal">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Are you sure you to close this Quote ?</h4>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" id="modal-btn-yes">Yes</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" id="modal-btn-no">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal end - Delete Quote Modal -->
+
+  <!-- Modal start - accept bids Modal -->
+  <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="acceptBidsModal">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Notification sent to Collection Center Associate and Farmers</h4>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success btn-sm" data-dismiss="modal" id="modal-btn-yes">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal end - accept bids Modal -->
+
+  <!-- Modal start - accept bids Modal -->
+  <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="rejectBidsModal">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Reject Selected Bids</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label class="col-form-label" for="rejectionReasonInput">Reason for Rejection</label>
+              <textarea type="text" class="form-control" id="rejectionReasonInput">
+              </textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success btn-sm" data-dismiss="modal" id="modal-btn-yes">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal end - accept bids Modal -->
+
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>

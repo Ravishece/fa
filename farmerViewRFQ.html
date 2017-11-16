@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Walmart App - Farmer View RFQ</title>
+<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <nav id="myNavbar" class="top-header navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="row">
+            <div class="col-xs-2 col-sm-3 col-md-3 header-logo-section">
+                <button class="navbar-toggle pull-left navbar-toggle-btn" data-target=".navbar-collapse" data-toggle="collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <!-- <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span> -->
+                  <span class="glyphicon glyphicon-menu-hamburger"></span>
+                </button>
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#"></a>
+                </div>
+            </div>
+            <div class="col-xs-8 col-sm-8 header-search-section">
+              <div class="input-group header-search-control">
+                  <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">All</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">RFQs</a></li>
+                      <li><a href="#">Produce Listing</a></li>
+                    </ul>
+                  </div><!-- /btn-group -->
+                  <input type="text" class="form-control header-search-input" />
+                  <button type="button" class="btn btn-default header-search-icon" aria-label="Search">
+                    <span class="glyphicon glyphicon-search"></span>
+                  </button>
+                </div>
+            </div>
+            <div class="col-xs-2 col-sm-1 header-account-section">
+                <div class="btn-group profile-options">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="glyphicon glyphicon-user"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Logout</a></li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+          
+      </div>
+  </nav>
+
+  <div class="container main-container">
+
+      <div class="row">
+          <div class="col-sm-12 navbar-section">
+              <nav class="navbar navbar-default hr-navbar-top">                  
+                <div class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav">
+                    <li class="active"> 
+                      <a href="#">
+                        <span class="glyphicon glyphicon-bullhorn"></span>
+                        RFQ
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="glyphicon glyphicon-briefcase"></span> 
+                        My Quotes
+                      </a>
+                      </li>
+                    <li>
+                      <a href="#">
+                        <span class="glyphicon glyphicon-grain"></span> 
+                        My Produces
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+          </div>
+      </div>
+
+      <div class="row">
+        
+        <div class="col-sm-12 main-section">
+            <!-- <button type="button" class="btn btn-success btn-rfq" data-toggle="modal" data-target="#createRFQModal">
+              Create a RFQ
+            </button> -->
+
+            <ul  class="nav nav-tabs">
+              <li class="active">
+                <a  href="#openRFQ" data-toggle="tab">Open RFQs</a>
+              </li>
+              <!-- <li>
+                <a href="#closedRFQ" data-toggle="tab">Closed RFQs</a>
+              </li> -->
+            </ul>
+
+            <div class="tab-content clearfix main-tabs">
+
+                <!-- tab1 content start -->
+                <div class="tab-pane active" id="openRFQ">
+
+                  <ul class="media-list rfq-list">
+                      <li class="media">
+                        <a class="pull-right" href="#">
+                          <img class="media-object rfq-img" src="images/potato.jpg" alt="">
+                        </a>
+                        <div class="media-body">
+                          <h4 class="media-heading">Potato</h4>
+                          <div>
+                            <p>Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                            <p>Quantity : 2000 kgs</p>
+                            <p>Closes on : 10 Dec, 2017</p>
+                            <p>
+                              <button class="btn btn-success" type="button" data-target=".submit-quote" data-toggle="modal">
+                                Place a Quote
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+                        
+                      </li>
+
+                      <li class="media">
+                        <a class="pull-right" href="#">
+                          <img class="media-object rfq-img" src="images/brinjal.jpg" alt="">
+                        </a>
+                        <div class="media-body">
+                          <h4 class="media-heading">Brinjal</h4>
+                          <div>
+                              <p>Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                              <p>Quantity : 5000 kgs</p>
+                              <p>Closes on : 30 Dec, 2017</p>
+                              <p>
+                                <button class="btn btn-success" type="button" data-target=".submit-quote" data-toggle="modal">
+                                  Place a Quote
+                                </button>
+                              </p>
+                            </div>
+                        </div>
+                      </li>
+
+                      <li class="media">
+                        <a class="pull-right" href="#">
+                          <img class="media-object rfq-img" src="images/onion.jpg" alt="">
+                        </a>
+                        <div class="media-body">
+                          <h4 class="media-heading">Onion</h4>
+                          <div>
+                              <p>Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                              <p>Quantity : 3000 kgs</p>
+                              <p>Closes on : 23 Dec, 2017</p>
+                              <p>
+                                <button class="btn btn-success" type="button" data-target=".submit-quote" data-toggle="modal">
+                                  Place a Quote
+                                </button>
+                              </p>
+                            </div>
+                        </div>
+                      </li>
+
+                      <li class="media">
+                        <a class="pull-right" href="#">
+                          <img class="media-object rfq-img" src="images/Strawberry.jpg" alt="">
+                        </a>
+                        <div class="media-body">
+                          <h4 class="media-heading">Strawberry</h4>
+                          <div>
+                            <p>Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                            <p>Quantity : 1000 kgs</p>
+                            <p>Closes on : 23 Dec, 2017</p>
+                            <p>
+                              <button class="btn btn-success" type="button" data-target=".submit-quote" data-toggle="modal">
+                                Place a Quote
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+
+                    </ul>
+                </div>
+                <!-- tab1 content end -->
+
+              </div>
+          </div>
+
+        </div>
+      </div>
+
+      
+  </div>
+
+  <footer class="footer">
+      <div class="row">
+          <div class="col-sm-12">
+            <p>&copy; Wal-Mart Stores, Inc.</p>
+          </div>
+      </div>
+  </footer>
+
+  <!-- Modal start - Create RFQ Modal  -->
+  <div id="SubmitQuoteModal" class="modal fade submit-quote" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Request for Quote</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label class="col-form-label" for="productNameInput">Product Name</label>
+              <input type="text" class="form-control" id="productNameInput" disabled placeholder="Product Name">
+            </div>
+            <div class="form-group">
+              <label class="col-form-label" for="quantityInput">Quantity</label>
+              <div class="input-group">
+                <input type="text" class="form-control" id="quantityInput" placeholder="Quantity">
+                <span class="input-group-addon">Kgs</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-form-label" for="priceInput">Price</label>
+              <div class="input-group">
+                  <span class="input-group-addon">Rs.</span>
+                <input type="text" class="form-control" id="priceInput" placeholder="Price">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Confirm</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal end - Create RFQ Modal -->
+
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>
