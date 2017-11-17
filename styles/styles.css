@@ -402,7 +402,8 @@ body {
 
 .filter-list{
   list-style-type: none;
-  padding-left: 10px;
+  padding-left: 15px;
+  padding-top: 5px;
   vertical-align: top;
 }
 
@@ -558,6 +559,9 @@ body {
   padding-left: 0;
 }
 
+.sr-main-section > .row{
+  margin-left: 0;
+}
 /* Produce Listing page styles - end */
 
 @media (max-width: 767px){
@@ -589,6 +593,12 @@ body {
     margin: 0;
   }
 
+  .sr-content-section{
+    margin-top: 10px;
+    margin-left: -10px;
+    margin-right: -15px;
+  }
+
   .product-img{
     text-align: center;
   }
@@ -600,6 +610,35 @@ body {
   .filter-list {
     /* display: inline-block; */
     /* vertical-align: top; */
+  }
+
+  .rfq-list > .media > .pull-right{
+    float: none !important;
+  }
+
+  .rfq-list > .media .rfq-img{
+    margin: 0 auto;
+  }
+
+  .my-tabs.nav-tabs>li.active>a,
+  .my-tabs.nav-tabs>li.active>a:hover,
+  .my-tabs.nav-tabs>li.active>a:focus{
+    background: #337ab7;
+    border: solid 1px #2e6da4;
+    color: #fff;
+  }
+  .my-tabs .badge{
+    border: solid 1px #fff;
+  }
+  .my-tabs.nav-tabs>li>a{
+    border: solid 1px #ccc;
+  }
+
+  .my-tabs .tab-title{
+    display:none;
+  }
+  .my-tabs.nav-tabs>li.active>a .tab-title{
+    display: inline-block;
   }
 }
 
@@ -622,6 +661,11 @@ body {
 
   .sr-filter-section{
     margin: 0 15px;
+  }
+
+  .sr-content-section{
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .filter-list{
@@ -828,3 +872,15 @@ body {
   }
 }
 /* Login form styles - end */
+
+.my-tabs .badge{
+  background: #0879c9;
+}
+
+.badge.accepted-quotes{
+  background: #5cb85c;
+}
+
+.badge.rejected-quotes{
+  background: #d9534f;
+}

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Walmart App - Farmer View RFQ</title>
+<title>Walmart App - Farmer - My Quotes</title>
 <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="styles/styles.css">
 </head>
@@ -65,14 +65,14 @@
               <nav class="navbar navbar-default hr-navbar-top">                  
                 <div class="collapse navbar-collapse">
                   <ul class="nav navbar-nav">
-                    <li class="active"> 
-                      <a href="#">
+                    <li> 
+                      <a href="farmerViewRFQ.html">
                         <span class="glyphicon glyphicon-bullhorn"></span>
                         RFQ
                       </a>
                     </li>
-                    <li>
-                      <a href="farmerMyQuotes.html">
+                    <li class="active">
+                      <a href="#">
                         <span class="glyphicon glyphicon-briefcase"></span> 
                         My Quotes
                       </a>
@@ -96,22 +96,52 @@
               Create a RFQ
             </button> -->
 
-            <ul  class="nav nav-tabs">
+            <ul  class="nav nav-tabs my-tabs">
               <li class="active">
-                <a  href="#openRFQ" data-toggle="tab">Open RFQs</a>
+                <a  href="#pendingQuotes" data-toggle="tab">
+                  <span class="glyphicon glyphicon-exclamation-sign"></span>
+                  <span class="tab-title">Pending Quotes</span>
+                  <span class="badge">3</span>
+                </a>
               </li>
-              <!-- <li>
-                <a href="#closedRFQ" data-toggle="tab">Closed RFQs</a>
-              </li> -->
+              <li>
+                <a href="#acceptedQuotes" data-toggle="tab">
+                  <span class="glyphicon glyphicon-ok-circle"></span>
+                  <span class="tab-title">Accepted Quotes</span>
+                  <span class="badge accepted-quotes">2</span>
+                </a>
+              </li>
+              <li>
+                <a href="#rejectedQuotes" data-toggle="tab">
+                  <span class="glyphicon glyphicon-remove-circle"></span>
+                  <span class="tab-title">Rejected Quotes</span>
+                  <span class="badge rejected-quotes">1</span>
+                </a>
+              </li>
             </ul>
 
             <div class="tab-content clearfix main-tabs">
 
                 <!-- tab1 content start -->
-                <div class="tab-pane active" id="openRFQ">
+                <div class="tab-pane active" id="pendingQuotes">
 
                   <ul class="media-list rfq-list">
-                      
+                      <li class="media">
+                        <a class="pull-right" href="#">
+                          <img class="media-object rfq-img" src="images/potato.jpg" alt="">
+                        </a>
+                        <div class="media-body">
+                          <h4 class="media-heading">Potato</h4>
+                          <div>
+                            <p>Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                            <p>Quantity : <strong>400 kgs</strong></p>
+                            <p>Quoted Price : <strong>Rs. 30 / Kg</strong></p>
+                            <p>Closes on : <strong>10 Dec, 2017</strong></p>
+                          </div>
+                        </div>
+                        
+                      </li>
+
                       <li class="media">
                         <a class="pull-right" href="#">
                           <img class="media-object rfq-img" src="images/brinjal.jpg" alt="">
@@ -120,13 +150,9 @@
                           <h4 class="media-heading">Brinjal</h4>
                           <div>
                               <p>Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                              <p>Quantity : 5000 kgs</p>
-                              <p>Closes on : 30 Dec, 2017</p>
-                              <p>
-                                <button class="btn btn-success" type="button" data-target=".submit-quote" data-toggle="modal">
-                                  Place a Quote
-                                </button>
-                              </p>
+                              <p>Quantity : <strong>500 kgs</strong></p>
+                              <p>Quoted Price : <strong>Rs. 60 / Kg</strong></p>
+                              <p>Closes on : <strong>30 Dec, 2017</strong></p>
                             </div>
                         </div>
                       </li>
@@ -139,59 +165,77 @@
                           <h4 class="media-heading">Onion</h4>
                           <div>
                               <p>Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                              <p>Quantity : 3000 kgs</p>
-                              <p>Closes on : 23 Dec, 2017</p>
-                              <p>
-                                <button class="btn btn-success" type="button" data-target=".submit-quote" data-toggle="modal">
-                                  Place a Quote
-                                </button>
-                              </p>
+                              <p>Quantity : <strong>300 kgs</strong></p>                           
+                              <p>Quoted Price : <strong>Rs. 70 / Kg</strong></p>
+                              <p>Closes on : <strong>23 Dec, 2017</strong></p>   
                             </div>
                         </div>
-                      </li>
-
-                      <li class="media">
-                        <a class="pull-right" href="#">
-                          <img class="media-object rfq-img" src="images/Strawberry.jpg" alt="">
-                        </a>
-                        <div class="media-body">
-                          <h4 class="media-heading">Strawberry</h4>
-                          <div>
-                            <p>Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                            <p>Quantity : 1000 kgs</p>
-                            <p>Closes on : 23 Dec, 2017</p>
-                            <p>
-                              <button class="btn btn-success" type="button" data-target=".submit-quote" data-toggle="modal">
-                                Place a Quote
-                              </button>
-                            </p>
-                          </div>
-                        </div>
-                      </li>
-                      
-                      <li class="media">
-                        <a class="pull-right" href="#">
-                          <img class="media-object rfq-img" src="images/potato.jpg" alt="">
-                        </a>
-                        <div class="media-body">
-                          <h4 class="media-heading">Potato</h4>
-                          <div>
-                            <p>Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                            <p>Quantity : 2000 kgs</p>
-                            <p>Closes on : 10 Dec, 2017</p>
-                            <p>
-                              <button class="btn btn-success" type="button" data-target=".submit-quote" data-toggle="modal">
-                                Place a Quote
-                              </button>
-                            </p>
-                          </div>
-                        </div>
-                        
                       </li>
 
                     </ul>
                 </div>
                 <!-- tab1 content end -->
+
+                 <!-- tab1 content start -->
+                 <div class="tab-pane" id="acceptedQuotes">
+                    
+                    <ul class="media-list rfq-list">
+                        <li class="media">
+                          <a class="pull-right" href="#">
+                            <img class="media-object rfq-img" src="images/Strawberry.jpg" alt="">
+                          </a>
+                          <div class="media-body">
+                            <h4 class="media-heading">Strawberry</h4>
+                            <div>
+                              <p>Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                              <p>Quantity : <strong>400 kgs</strong></p>
+                              <p>Quoted Price : <strong>Rs. 165 / Kg</strong></p>
+                              <p>Accepted on : <strong>15 Nov, 2017</strong></p>
+                            </div>
+                          </div>
+                        </li>
+  
+                        <li class="media">
+                          <a class="pull-right" href="#">
+                            <img class="media-object rfq-img" src="images/ginger.jpg" alt="">
+                          </a>
+                          <div class="media-body">
+                            <h4 class="media-heading">Ginger</h4>
+                            <div>
+                              <p>Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                              <p>Quantity : <strong>100 kgs</strong></p>
+                              <p>Quoted Price : <strong>Rs. 400 / Kg</strong></p>
+                              <p>Accepted on : <strong>30 Oct, 2017</strong></p>
+                            </div>
+                          </div>
+                        </li>
+  
+                      </ul>
+                  </div>
+                  <!-- tab1 content end -->
+
+                  <!-- tab1 content start -->
+                 <div class="tab-pane" id="rejectedQuotes">
+                    
+                    <ul class="media-list rfq-list">
+                        <li class="media">
+                          <a class="pull-right" href="#">
+                            <img class="media-object rfq-img" src="images/carrot.jpg" alt="">
+                          </a>
+                          <div class="media-body">
+                            <h4 class="media-heading">Carrot</h4>
+                            <div>
+                              <p>Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                              <p>Quantity : <strong>200 kgs</strong></p>
+                              <p>Quoted Price : <strong>Rs. 35 / Kg</strong></p>
+                              <p>Rejected on : <strong>11 Nov, 2017</strong></p>
+                            </div>
+                          </div>
+                        </li>
+  
+                      </ul>
+                  </div>
+                  <!-- tab1 content end -->
 
               </div>
           </div>
